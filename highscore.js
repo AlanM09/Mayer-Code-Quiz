@@ -14,7 +14,7 @@ function printHighScore() {
     for (var i = 0; i < highscores.length; i++) {
       console.log(highscores[i].secondsLeft);
       var home = document.createElement("li"); 
-      var words = document.createTextNode(highscores[i].initials + ": " + highscores[i].secondsLeft)  ; //content of p
+      var words = document.createTextNode(highscores[i].initials + ": " + highscores[i].secondsLeft)  ;
       home.appendChild(words);
       highScorePrint.appendChild(home);
     }
@@ -33,5 +33,3 @@ clearHighScore.addEventListener("click", function() {
     localStorage.removeItem("highscores");
     window.location.reload();
 });
-
-// Fernando Soto Calis @hoffman1200
