@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Code Quiz</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row" id="row1">
+            <div class="col-9">
+                <a href="highScores.html" id="highScore">View High Scores</a>
+            </div>
+            <div class="col-3" id="timer">
+                <a>Time: 02:00</a>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid">
+            <h1 class="display-3">Coding Quiz Challenge</h1>
+            <h2>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</h2>
+            <p class="lead">
+                <a class="btn btn-dark btn-lg" href="#" role="button" id="startQuiz">Start Quiz</a>
+                <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Enter your initials">
+                <a class="btn btn-dark btn-lg" href="highScores.html" role="button" id="buttonInitials">Submit</a>
+            </p>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row" id="row2">
+                <div class="col-4" id="questionsCard">
+                    <div class="card text-center" style="width: 18rem;" id="cardMedia">
+                        <div class="card-body">
+                            <h5 class="card-title">Questions</h5>
+                            <p class="card-text" id="questions">With supporting text below as a natural lead-in to additional content??</p>
+                            <div class="row buttonRow">
+                                <a href="#" class="btn btn-dark quizBtn" id="button1">Go somewhere</a>
+                            </div>
+                            <div class="row buttonRow">
+                                <a href="#" class="btn btn-dark quizBtn" id="button2">Go somewhere</a>
+                            </div>
+                            <div class="row buttonRow">
+                                <a href="#" class="btn btn-dark quizBtn" id="button3">Go somewhere</a>
+                            </div>
+                            <div class="row buttonRow">
+                                <a href="#" class="btn btn-dark quizBtn" id="button4">Go somewhere</a>
+                            </div>
+                            <div class="row buttonRow">
+                                <p id="correctIncorrect"></p>
+                            </div>
+                        </div>
+                    </div>                
+                </div>
+            <div class="col-4" id="imageMedia">
+                <img src= "Copia de totally.png" class="img-responsive width=100%"/>    
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>    
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="high.js"></script>
+</body>
+</html>
+
+<!-- Fernando Soto Calis @hoffman1200 -->

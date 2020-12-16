@@ -1,0 +1,122 @@
+body {
+    background-color: black;
+    }
+    
+    #row1 {
+        padding: 10px;
+    }
+    
+    #row2 {
+        justify-content: center;
+    }
+    
+    .col-3 {
+        color: #FFF200;
+        text-align: center;
+    }
+    
+    #highScore {
+        color: #FFF200;
+    }
+    
+    .display-3 {
+        text-align: center;
+        margin-top: -50px;
+    }
+    
+    .lead {
+        text-align: center;
+    }
+    
+    .jumbotron {
+        background-color: #64A966;
+        height: 270px;
+    }
+    
+    .buttonRow {
+        justify-content: center;
+        padding: 5px;
+    }
+    
+    .card {
+        background-color: #64A966;
+    }
+    
+    img {
+        width: 450px;
+    }
+    
+    .col-4 {
+        text-align: -webkit-center;
+    }
+    
+    #questionsCard {
+        display: none;
+    }
+    
+    #correctIncorrect {
+        font-size: xx-large;
+    }
+    
+    #buttonInitials {
+        display: none;
+    }
+    
+    #inlineFormInput {
+        display: none;
+        width: 30%;
+    }
+    
+    /* highScores HTML */
+    
+    #highRow {
+        padding: 10px;
+    }
+    
+    #theTottaly {
+        color: #FFF200;
+    }
+    
+    #header {
+        font-size: 4.5rem;
+        font-weight: 300;
+        line-height: 1.2;
+    }
+    
+    #imageHigh {
+        justify-content: center;
+        padding: 30px;
+    }
+    
+    /* Media query */
+    
+    @media (max-width: 1148px){
+        #imageMedia {
+            display: none;
+        }
+    }
+    
+    @media (max-width: 1206px){
+        #imagenDisplay {
+            display: none;
+        }
+    
+    }
+    
+    @media (max-width: 830px) {
+        .display-3 {
+            font-size: 350%;
+            margin-top: 1px;
+        }
+        .jumbotron {
+            height: 100%;
+        }
+        #imagen1 {
+            float: right;
+        }
+        #cardMedia {
+            float: right;
+        }
+    }
+    
+    /* Fernando Soto Calis @hoffman1200 */
