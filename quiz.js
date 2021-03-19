@@ -1,16 +1,15 @@
-var startButton = document.getElementById("start-button");
-var nextButton = document.getElementById("next-button");
-var questionContainerElement = document.getElementById('question-container');
+
+var timer = document.getElementById('timer');
+var questionContainerElement = document.getElementById('intro');
+var startButton = document.getElementById("start");
+var submitButton = document.getElementById('submit');
 var questionElement = document.getElementById('question');
-var answerButtonsElement = document.getElementById('answer-buttons');
-var submitButton = document.getElementById('submit-button');
-var highScores = document.getElementById('high-scores');
-var timer = document.getElementById('countdown');
-var timerHandle
-var timeLeft = 120;
+var answerButtonsElement = document.getElementById('answer');
+var nextButton = document.getElementById("next");
 var finalScore = document.getElementById('final-score')
-var score = 0;
-var submitInitialContainerElement = document.getElementById('submit-initial-container');
+var submitInitialContainerElement = document.getElementById('initials');
+var highScores = document.getElementById('high-scores');
+
 
 //quiz questions
 var question = [{
@@ -99,14 +98,14 @@ nextButton.addEventListener('click', () => {
         currentQuestionIndex++
     } else {
         showFinalScore();
-        questionContainerElement.classList.add('hide');
-        questionElement.classList.add('hide');
-        answerButtonsElement.classList.add('hide');
+        questionContainerElement.classList.add('display');
+        questionElement.classList.add('display');
+        answerButtonsElement.classList.add('display');
     };
     setNextQuestion();
 })
 
-
+var timeLeft = 120;
 function startTimer() {
     timerHandle = setInterval(function () {
             if (timeLeft >= 1) {
@@ -120,13 +119,15 @@ function startTimer() {
         1000);
 }
 
+var score = 0;
+
 function startQuiz() {
-    startButton.classList.add('hide');
-    submitInitialContainerElement.classList.add('hide');
+    startButton.classList.add('display');
+    submitInitialContainerElement.classList.add('display');
     currentQuestionIndex = 0;
-    questionContainerElement.classList.add('hide');
-    questionElement.classList.remove('hide');
-    answerButtonsElement.classList.remove('hide');
+    questionContainerElement.classList.add('display');
+    questionElement.classList.remove('display');
+    answerButtonsElement.classList.remove('display');
     setNextQuestion();
 }
 
@@ -151,7 +152,7 @@ function showQuestion(question) {
 }
 
 function resetState() {
-    nextButton.classList.add('hide');
+    nextButton.classList.add('display');
     while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild(answerButtonsElement.firstChild);
     }
@@ -165,15 +166,15 @@ function selectAnswer(e) {
         setStatusClass(button, button.dataset.correct);
     });
     if (currentQuestionIndex > question.length) {
-        nextButton.classList.remove('hide');
+        nextButton.classList.remove('display');
     } else {
-        nextButton.classList.remove('hide');
+        nextButton.classList.remove('display');
     }
 }
 
 
 function showFinalScore() {
-    document.getElementById("submit-initial-container").classList.remove('hide');
+    document.getElementById("submit-initial-container").classList.remove('display');
     finalScore.textContent = "Your score is " + score;
 }
 
@@ -201,22 +202,11 @@ submitButton.addEventListener('click', function (event) {
     event.preventDefault();
     var initials = document.querySelector('#initials').value;
     if (initials === '') {
-        alert('Initials cannot be blank.');
+        alert('Type in Initials.');
     } else {
-        submitInitialContainerElement.classList.add('hide');
-        highScores.classList.remove('hide');
+        submitInitialContainerElement.classList.add('display');
+        highScores.classList.remove('display');
 
     }
     localStorage.setItem("initials", initials);
 });
-
-renderLastRegistered();
-
-function renderLastRegistered() {
-    localStorage.getItem("initials", initials);
-    var initials = localStorage.getItem("initials");
-
-    if (initials === null) {
-        return;
-    }
-}
