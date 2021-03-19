@@ -4,38 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <script src="./quiz.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="./quiz.js"></script>
     <title>Coding Quiz</title>
 </head>
 
 <body>
 
     <header>
-        <button id="highscore" class="viewhighscore">High Scores</button>
-        <h1 id="timer">120</h1>
+        <button>View high scores</button>
+        <h1 id="countdown"> 120 </h1>
     </header>
-
     <div class="container">
-        <div id="homepage">
-            <h1>Coding Quiz Challenge</h1>
-            <p>Welcome to the Coding Quiz Challenge! You will have 2 minutes to complete the challenge. For every wrong answer your time will decrease by 5 seconds. Good Luck!</p>
-            <button id="start-quiz-btn" class="btn">Start Quiz</button>
+        <div id="question-container">
+            <h1> Coding Quiz Challenge</h1>
+            <p> Welcome to the Coding Quiz Challenge! You will have 2 minutes to complete the challenge. For every wrong
+                answer your time will decrease by 5 seconds. Good Luck!</p>
         </div>
-
         <div>
-            <div id="question" class="display">Questions</div>
-            <div id="options" class="display">
-                <button class="answers">Answer 1</button>
-                <button class="answers">Answer 2</button>
-                <button class="answers">Answer 3</button>
-                <button class="answers">Answer 4</button>
+            <div id="question" class="hide">Question</div>
+            <div id="answer-buttons" class="hide">
+                <button class="buttons">Answer 1</button>
+                <button class="buttons">Answer 2</button>
+                <button class="buttons">Answer 3</button>
+                <button class="buttons">Answer 4</button>
             </div>
         </div>
+        </question>
+        <div class="controls">
+            <button id="start-button" id="timer">Start Quiz</button>
+            <button id="next-button" class="hide">Next</button>
 
-        
-    </div>
-
+        </div>
+        <div class="container">
+            <div id="submit-initial-container" class="hide">
+                <h1 id="finished-text">All done!</h1>
+                <p id="final-score"></p>
+                <form>
+                    <label for="initials">Enter Initials:</label>
+                    <input type="text" id="initials" name="initials">
+                </form>
+                <button id="submit-button">Submit</button>
+            </div>
+        </div>
+        <div id="high-scores" class="hide">
+            <h1>High Scores</h1>
+            <button> Restart</button>
+        </div>
 </body>
 
 </html>
